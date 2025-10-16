@@ -1,2 +1,1 @@
-function saludar() { return 'Hola Mundo'; }
-function validarEmail(email) { return email.includes('@'); }
+function saludar() { return 'Hola desde desarrollo'; }
