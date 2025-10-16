@@ -1,2 +1,1 @@
-# practica-ramas-FelixAlexisSanchezLopez
-Repositorio para practicar ramas Feacture
+# Proyecto de Práctica - Gestión de Ramas
