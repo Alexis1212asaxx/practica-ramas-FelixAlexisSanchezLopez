@@ -1,0 +1,43 @@
+    1  git clone git@github.com:Chappie7w7/DWP_Eq3.git
+    2  . code 
+    3  git config --list
+    4  git config --global --list
+    5  clear
+    6  echo "# Proyecto de Práctica - Gestión de Ramas" > README.md
+    7  git add README.md
+    8  git commit -m "Commit inicial: estructura base del proyecto"
+    9  clear
+   10  git push origin main
+   11  clear
+   12  git checkout -b desarrollo
+   13  echo "function saludar() { return 'Hola Mundo'; }" > funciones.js
+   14  git add .
+   15  git commit -m "feat: añadir función de saludo básica"
+   16  git checkout -b feature/validacion
+   17  echo "function validarEmail(email) { return email.includes('@'); }" >> funciones.js
+   18  git add .
+   19  git commit -m "feat: añadir validación de email"
+   20  git checkout desarrollo
+   21  git checkout -b respaldo-151024-FS
+   22  git push -u origin respaldo-151024-FS
+   23  git add README.md
+   24  git commit -m "docs: agregar información del respaldo"
+   25  git checkout desarrollo
+   26  git merge feature/validacion
+   27  git checkout main
+   28  echo "function saludar() { return 'Hola desde main'; }" > funciones.js
+   29  git add .
+   30  git commit -m "fix: modificar saludo en main"
+   31  git checkout desarrollo
+   32  echo "function saludar() { return 'Hola desde desarrollo'; }" > funciones.js
+   33  git add .
+   34  git commit -m "fix: modificar saludo en desarrollo"
+   35  git merge main
+   36  git add .
+   37  git commit -m "fix: resolver conflicto en fusión"
+   38  git branch -d feature/validacion
+   39  git add README.md
+   40  clear
+   41  git commit -m "docs: actualización final del flujo de práctica"
+   42  git push origin desarrollo
+   43  history > historial-comandos.txt
